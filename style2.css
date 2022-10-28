@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+html, body {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background: rgb(111, 189, 189);
+}
+.container {
+height: 100px;
+width: 360px;
+position: relative;
+background: linear-gradient(90deg, #14ffe9, #ffeb3b, #ff00e0);
+border-radius: 10px;
+cursor: default;
+animation: animate 1.5s linear infinite;
+}
+.container .diskkay .container span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container .displays {
+    z-index: 999;
+    height: 85px;
+    width: 345px;
+    border-radius: 6px;
+    text-align: center;
+}
+.disp #time {
+    line-height: 85px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-color: linear-gradient(90deg, #14ffe9, #ffeb3b, #ff00e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation:  animate 1.5s linear infinite;
+}
+@keyframes animate{
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+.container span{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background: inherit;
+}
+.container span:first-child{
+    filter: blur(7px);
+}
+.container span:last-child{
+    filter: blur(20px);
+}
